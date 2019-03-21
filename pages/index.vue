@@ -105,7 +105,7 @@ body > .el-container {
 }
 .el-menu-vertical:not(.el-menu--collapse) {
   width: 200px;
-  min-height: 400px;
+  min-height: 200px;
 }
 .logo {
   background-color: #002641;
