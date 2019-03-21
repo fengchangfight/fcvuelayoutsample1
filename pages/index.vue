@@ -2,14 +2,9 @@
   <section class="container">
     <el-container style="height: 100%">
       <el-container>
-        <div>
+        <div style="background-color:#002641;border:none;">
           <div class="logo">
-            <img width="60px" height="60px;" src="/logo.png" />
-            <h1
-              style="color:white;margin-top:13px;font-size: 22px;font-weight: 600;"
-            >
-              数据治理
-            </h1>
+            <img width="62px" height="60px;" src="/logo.png" />
           </div>
           <el-menu
             default-active="2"
@@ -17,6 +12,8 @@
             @open="handleOpen"
             @close="handleClose"
             :collapse="isCollapse"
+            background-color="#002641"
+            text-color="white"
           >
             <el-submenu index="1">
               <template slot="title">
@@ -86,21 +83,14 @@ export default {
 }
 .el-header,
 .el-footer {
-  background-color: #002641;
+  background-color: white;
   color: #333;
   text-align: center;
   line-height: 60px;
 }
 
-.el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
-}
-
 .el-main {
-  background-color: #e9eef3;
+  background-color: gray;
   color: #333;
   text-align: center;
   line-height: 160px;
@@ -110,13 +100,8 @@ body > .el-container {
   margin-bottom: 40px;
 }
 
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
+.el-submenu {
+  width: 200px;
 }
 .el-menu-vertical:not(.el-menu--collapse) {
   width: 200px;
