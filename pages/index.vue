@@ -15,7 +15,7 @@
             background-color="#002641"
             text-color="white"
           >
-            <el-submenu index="1">
+            <el-submenu class="el-submenu-vertical" index="1">
               <template slot="title">
                 <i class="el-icon-star-on"></i>
                 <span slot="title">原始数据</span>
@@ -25,7 +25,7 @@
                 <el-menu-item index="1-2">item two</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="2">
+            <el-submenu class="el-submenu-vertical" index="2">
               <template slot="title">
                 <i class="el-icon-star-off"></i>
                 <span slot="title">矫正数据</span>
@@ -35,7 +35,7 @@
                 <el-menu-item index="1-2">item two</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="4">
+            <el-submenu class="el-submenu-vertical" index="4">
               <template slot="title">
                 <i class="el-icon-document"></i>
                 <span slot="title">测试集</span>
@@ -45,7 +45,7 @@
                 <el-menu-item index="1-2">item two</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="4">
+            <el-submenu class="el-submenu-vertical" index="4">
               <template slot="title">
                 <i class="el-icon-tickets"></i>
                 <span slot="title">测试</span>
@@ -99,12 +99,10 @@ export default {
 body > .el-container {
   margin-bottom: 40px;
 }
-
-.el-submenu {
-  width: 200px;
+.el-menu-vertical {
+  border: none;
 }
 .el-menu-vertical:not(.el-menu--collapse) {
-  width: 200px;
   min-height: 200px;
 }
 .logo {
