@@ -59,7 +59,20 @@
           </el-menu>
         </div>
         <el-container>
-          <el-header></el-header>
+          <el-header>
+            <label
+              v-if="!isCollapse"
+              style="margin-left:10px;"
+              @click="toggleCollapse()"
+              class="el-icon-arrow-left toggle-side"
+            ></label>
+            <label
+              v-if="isCollapse"
+              style="margin-left:10px;"
+              @click="toggleCollapse()"
+              class="el-icon-arrow-right toggle-side"
+            ></label>
+          </el-header>
           <el-main></el-main>
         </el-container>
       </el-container>
@@ -73,7 +86,11 @@ export default {
       isCollapse: false
     }
   },
-  methods: {}
+  methods: {
+    toggleCollapse() {
+      this.isCollapse = !this.isCollapse
+    }
+  }
 }
 </script>
 
@@ -85,7 +102,7 @@ export default {
 .el-footer {
   background-color: white;
   color: #333;
-  text-align: center;
+  text-align: left;
   line-height: 60px;
 }
 
@@ -109,5 +126,8 @@ body > .el-container {
   background-color: #002641;
   min-height: 60px;
   display: flex;
+}
+.toggle-side:hover {
+  cursor: pointer;
 }
 </style>
